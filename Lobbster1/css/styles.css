@@ -616,6 +616,12 @@ aside{
   color: black;
 }
 
+.flip-card-back a{
+  text-decoration:none;
+  display: block;
+  color:white;
+}
+
 /* Style the back side */
 .flip-card-back {
   background-color: dodgerblue;
@@ -626,6 +632,7 @@ aside{
 
 .flip-card-back a{
   text-decoration:none;
+  display: block;
   color:white;
 }
 
