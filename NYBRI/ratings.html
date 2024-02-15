@@ -246,7 +246,163 @@
                                 
                             </div>
                         </div>
+						
+						
+						
+					
+                      <!-- New Content--> 
+					
+					
+					<h3>View the Default Ratings for All Fintech</h3>
+                        <div>
+                            <p>The scores in the table below are based on all categories being equally important to a customer. The FINTECH are sorted by their overall rankings from best to worst.</p>
+                            <table>
+                                <tr>
+                                    <th>Fintech Name</th>
+                                    <th>Score (out of 100)</th>
+                                </tr>
+                                <tr>
+                                    <td>Paypal</td>
+                                    <td>72.5</td>
+                                </tr>
+                                <tr>
+                                    <td>ApplePay</td>
+                                    <td>71.25</td>
+                                </tr>
+                                <tr>
+                                    <td>GooglePay</td>
+                                    <td>58</td>
+                                </tr>
+                                <tr>
+                                    <td>Venmo</td>
+                                    <td>47.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Cash App</td>
+                                    <td>46.75</td>
+                                </tr>
+                                <tr>
+                                    <td>Chime</td>
+                                    <td>42.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Moneylion</td>
+                                    <td>40.75</td>
+                                </tr>
+                                <tr>
+                                    <td>Zelle</td>
+                                    <td>31.75</td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    
+					<h3>Customize Your FINTECH RATINGS</h3>
+                        <div>
+                            <div id="slider-container" class="slider-container">
+                                <p>In this section, you can enter weights for any of the 20 categories used for ranking FINTECH. If the value typed into the box isn't valid, it will automatically be set to 0. When your Total Percent is 100, you can click "Calculate FINTECH Scores" to produce a customized table with banks listed from best to worst.</p>
+                                <div class="visible-label">
+                                    <label><strong>Total Percent:</strong> {{ calculateTotal() }}
+                                        <br><strong>Remaining:</strong> {{ 100 - calculateTotal()}}</label>
+                                    <button type="button" ng-click="finalScore(); showme='true'">Calculate FINTECH scores</button>
+                                </div>
+                            </div>
+                            <div class="form-container">
+                                <form>
+                                    <ul>
+                                        <li>
+                                            <label>P2P Banking </label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.numBraches">  <!-- FIX THESE ng-model THINGIES FIGURE IT OUT IDK should be pretty easy tbh just DO IT -->
+                                        </li>
+                                        <li>
+                                            <label>Encrypted financial transfers </label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.branchLocDistribution">
+                                        </li>
+                                        <li>
+                                            <label>Link external bank account</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.onlineBankings">
+                                        </li>
+                                        <li>
+                                            <label>Link external credit card</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.atmFees">
+                                        </li>
+                                        <li>
+                                            <label>Fraud protection</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.checkingFees">
+                                        </li>
+
+                                        <li>
+                                            <label>One touch login</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.savingsFees">
+                                        </li>
+                                        <li>
+                                            <label>Paycheck advance</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.overdraft">
+                                        </li>
+                                        <li>
+                                            <label>Contactless payment</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.overdraftLimit">
+                                        </li>
+                                        <li>
+                                            <label>2 factor authentication</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.creditCards">
+                                        </li>
+                                        <li>
+                                            <label>Transaction fees</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.creditCardFees">
+                                        </li>
+
+                                        <li>
+                                            <label>Credit building</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.loanOriginationMarketShare">
+                                        </li>
+                                        <li>
+                                            <label>Credit card offering</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptNy">
+                                        </li>
+                                        <li>
+                                            <label>Overdraft fees</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptLatino">
+                                        </li>
+                                        <li>
+                                            <label>Credit card payment fees</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptBlack">
+                                        </li>
+                                        <li>
+                                            <label>Cryptocurrency purchase options</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptLowIncome">
+                                        </li>
+
+
+                                        <li>
+                                            <label>Cash advance</label>
+                                            <input type="text" ng-blur="reset()" ng-model="weights.percentLowBorrowers">
+                                        </li>
+                                        
+
+
+                                        <!--ng-show="calculateTotal() === 100"
+                                    <li>
+                                        <label>Total Percent: {{ calculateTotal() }}
+                                            <br>Percent Remaining: {{ 100 - calculateTotal()}}</label>
+                                        <button type="button" ng-click="finalScore(); showme='true'">Calculate Bank Scores</button>
+                                    </li>-->
+                                    </ul>
+                                    <div class="hidden-label">
+                                        <label><strong>Total Percent:</strong> {{ calculateTotal() }}
+                                            <br><strong>Remaining:</strong> {{ 100 - calculateTotal()}}</label>
+                                        <button type="button" ng-click="finalScore(); showme='true'">Calculate FINTECH SCORESD</button> <!-- err: Have no idea why this isn't changing the buttons-->
+                                    </div>
+                                </form>
+                                
+                            </div>
+                        </div>
+					
+					</div>  <!-- Accordian Div End -->
+					<!-- New Content--> 
                     </div>
+					
+					
                 </div>
             </div>
             <div class="footer row">

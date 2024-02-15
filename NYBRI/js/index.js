@@ -34,7 +34,194 @@ myApp.controller('myController', function ($scope) {
         return $scope.total;
     };
 
-    var bankInfo = [{
+
+	// ==============================================================
+    // New VARIABLES
+	// ==============================================================
+	
+	var techInfo = [{
+		bankName: 'Paypal',
+		bankRatings: {
+			peerToPeerBankin: 5,
+			encryptTrans: 6.25,
+			linkExternalAccount: 6.25,
+			linkExternalCreditCard: 6.25,
+			fraudProtection: 6.25,
+			oneTouchLogin: 6.25,
+			paycheckAdvance: 0,
+			contactlessPayment: 6.25,
+			twoFactorAuth: 6.25,
+			transactionFees: 5,
+			creditBuilding: 0,
+			creditCardOffering: 6.25,
+			overdraftFees: 6.25,
+			creditCardPaymentFees: 3.75,
+			cryptoPurchaseOptions: 2.5,
+			cashAdvance: 0               // This was marked BLANK in the spread sheet, so keep an eye on this one and be sure to ask the client for clarification...
+			
+	}},
+	
+	{
+		bankName: 'ApplePay',
+		bankRatings: {
+			peerToPeerBankin: 5,
+			encryptTrans: 6.25,
+			linkExternalAccount: 6.25,
+			linkExternalCreditCard: 6.25,
+			fraudProtection: 6.25,
+			oneTouchLogin: 3.75,
+			paycheckAdvance: 0,
+			contactlessPayment: 3.75,
+			twoFactorAuth: 6.25,
+			transactionFees: 6.25,
+			creditBuilding: 6.25,
+			creditCardOffering: 6.25,
+			overdraftFees: 2.5,
+			creditCardPaymentFees: 2.5,
+			cryptoPurchaseOptions: 3.75,
+			cashAdvance: 0
+		
+	}},
+	
+	{
+		bankName: 'GooglePay',
+		bankRatings: {
+			peerToPeerBankin: 4.25,
+			encryptTrans: 6.25,
+			linkExternalAccount: 6.25,
+			linkExternalCreditCard: 3.75,
+			fraudProtection: 6.25,
+			oneTouchLogin: 3.75,
+			paycheckAdvance: 0,
+			contactlessPayment: 6.25,
+			twoFactorAuth: 6.25,
+			transactionFees: 0,
+			creditBuilding: 0,
+			creditCardOffering: 2.5,
+			overdraftFees: 2.5,
+			creditCardPaymentFees: 3.75,
+			cryptoPurchaseOptions: 6.25,
+			cashAdvance: 0
+		
+	}},
+	
+	{
+		bankName: 'Venmo',
+		bankRatings: {
+			peerToPeerBankin: 4.25,
+			encryptTrans: 0,
+			linkExternalAccount: 6.25,
+			linkExternalCreditCard: 6.25,
+			fraudProtection: 6.25,
+			oneTouchLogin: 0,
+			paycheckAdvance: 0,
+			contactlessPayment: 6.25,
+			twoFactorAuth: 6.25,
+			transactionFees: 2.5,
+			creditBuilding: 0,
+			creditCardOffering: 2.5,
+			overdraftFees: 0,
+			creditCardPaymentFees: 2.5,
+			cryptoPurchaseOptions: 2,
+			cashAdvance: 2.5
+		
+	}},
+	
+	{
+		bankName: 'CashApp',
+		bankRatings: {
+			peerToPeerBankin: 6.25,
+			encryptTrans: 6.25,
+			linkExternalAccount: 6.25,
+			linkExternalCreditCard: 6.25,
+			fraudProtection: 6.25,
+			oneTouchLogin: 6.25,
+			paycheckAdvance: 0,
+			contactlessPayment: 0,
+			twoFactorAuth: 0,
+			transactionFees: 3.75,
+			creditBuilding: 0,
+			creditCardOffering: 0,
+			overdraftFees: 0,
+			creditCardPaymentFees: 2.5,
+			cryptoPurchaseOptions: 3,
+			cashAdvance: 0
+		
+	}},
+	
+	{
+		bankName: 'Chime',
+		bankRatings: {
+			peerToPeerBankin: 6.25,
+			encryptTrans: 6.25,
+			linkExternalAccount: 2.5,
+			linkExternalCreditCard: 0,
+			fraudProtection: 3.75,
+			oneTouchLogin: 0,
+			paycheckAdvance: 3.75,
+			contactlessPayment: 6.25,
+			twoFactorAuth: 3.75,
+			transactionFees: 3.75,
+			creditBuilding: 3.75,
+			creditCardOffering: 0,
+			overdraftFees: 1.25,
+			creditCardPaymentFees: 0,
+			cryptoPurchaseOptions: 1.25,
+			cashAdvance: 0
+		
+	}},
+	
+	{
+		bankName: 'Moneylion',
+		bankRatings: {
+			peerToPeerBankin: 1,
+			encryptTrans: 6.25,
+			linkExternalAccount: 3.75,
+			linkExternalCreditCard: 5,
+			fraudProtection: 0,
+			oneTouchLogin: 0,
+			paycheckAdvance: 6.25,
+			contactlessPayment: 0,
+			twoFactorAuth: 0,
+			transactionFees: 3.75,
+			creditBuilding: 5,
+			creditCardOffering: 5,
+			overdraftFees: 0,
+			creditCardPaymentFees: 0,
+			cryptoPurchaseOptions: 1.25,
+			cashAdvance: 3.5
+		
+	}},
+	
+	{
+		bankName: 'Zelle',
+		bankRatings: {
+			peerToPeerBankin: 6.25,
+			encryptTrans: 6.25,
+			linkExternalAccount: 6.25,
+			linkExternalCreditCard: 0,
+			fraudProtection: 0,
+			oneTouchLogin: 0,
+			paycheckAdvance: 0,
+			contactlessPayment: 0,
+			twoFactorAuth: 6.25,
+			transactionFees: 6.25,
+			creditBuilding: 0,
+			creditCardOffering: 0,
+			overdraftFees: 0,
+			creditCardPaymentFees: 0,
+			cryptoPurchaseOptions: .5,
+			cashAdvance: 0
+		
+	}}];
+	
+	// ==============================================================
+	// END OF NEW VARIABLES
+	// ==============================================================
+	
+	
+	
+	var bankInfo = [{
         bankName: 'bankOfAmerica',
         bankRatings: {
             numBraches: 5,
@@ -505,7 +692,7 @@ myApp.controller('myController', function ($scope) {
         
     }
     
-    $scope.finalScore = function () {
+    $scope.finalScore = function () {                          // THIS SI THE BIG BOY FUCTION THAT YOU NEED TO LOOK AT FOR THE FINTRECH 
         $scope.bankOfAmerica = [];
         $scope.hsbc = [];
         $scope.santander = [];
@@ -526,12 +713,12 @@ myApp.controller('myController', function ($scope) {
         $scope.appleBank = [];
         $scope.peoplesUnited = [];
 
-        for (var x = 0; x < bankInfo.length; x++) {
-            $scope.score = 0;
-            for (var score in bankInfo[x].bankRatings) {
-                $scope.current = bankInfo[x].bankName;
-                $scope.score = parseInt(bankInfo[x].bankRatings[score] / 5 * $scope.weights[score]);
-                $scope[$scope.current].push($scope.score);
+        for (var x = 0; x < bankInfo.length; x++) {                                                    // For all variables in the bank info list...
+            $scope.score = 0;                                                                          // set score = 0
+            for (var score in bankInfo[x].bankRatings) {                                               // For the score variable in all the ratings in the specific bank...
+                $scope.current = bankInfo[x].bankName;                                                 // Grab the bank name
+                $scope.score = parseInt(bankInfo[x].bankRatings[score] / 5 * $scope.weights[score]);   // Divide the score by 5 to calculate the weight of the score
+                $scope[$scope.current].push($scope.score);                                             // ??? Push the current score to the overall score ???
             }
             console.log($scope.current + ": " + $scope[$scope.current]);
         }
@@ -544,7 +731,7 @@ myApp.controller('myController', function ($scope) {
             return total;
         };
 
-        $scope.allScores = [
+        $scope.allScores = [                                                                            // PRINT OUT ALL THE SCORES
             {bankname: 'Bank of America', score: $scope.oneScore($scope.bankOfAmerica)},
             {bankname: 'HSBC', score: $scope.oneScore($scope.hsbc)},
             {bankname: 'Santander', score: $scope.oneScore($scope.santander)},
