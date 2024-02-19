@@ -130,6 +130,19 @@ p {
   color: inherit;
 }
 
+ul {
+  font-family: titillium, Helvetica, sans-serif;
+  font-size: 20px;
+  color: inherit;
+  margin: 0 5% 0 10%;
+}
+
+li{
+  font-family: titillium, Helvetica, sans-serif;
+  font-size: 20px;
+  color: inherit;
+}
+
 /*styles for report-activities*/
 .act{
   display:none;
@@ -616,6 +629,12 @@ aside{
   color: black;
 }
 
+.flip-card-back a{
+  text-decoration:none;
+  display: block;
+  color:white;
+}
+
 /* Style the back side */
 .flip-card-back {
   background-color: dodgerblue;
@@ -626,6 +645,7 @@ aside{
 
 .flip-card-back a{
   text-decoration:none;
+  display: block;
   color:white;
 }
 
