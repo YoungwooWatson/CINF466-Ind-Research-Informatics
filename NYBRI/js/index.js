@@ -214,6 +214,7 @@ myApp.controller('myController', function ($scope) {
 			cashAdvance: 0
 		
 	}}];
+
 	
 	// ==============================================================
 	// END OF NEW VARIABLES
@@ -766,3 +767,10 @@ myApp.controller('myController', function ($scope) {
     };
 
 });
+
+// updated for ranking button : 2/20/2024
+$scope.finalScore = function () {
+    if ($scope.calculateTotal() === 100) {
+        $scope.showme = true; 
+    }
+};

@@ -135,11 +135,17 @@
                         <div>
                             <div id="slider-container" class="slider-container">
                                 <p>In this section, you can enter weights for any of the 20 categories used for ranking banks. If the value typed into the box isn't valid, it will automatically be set to 0. When your Total Percent is 100, you can click "Calculate Bank Scores" to produce a customized table with banks listed from best to worst.</p>
+                                <!-- Updated ver for Button with disable/inable function respect to Total Percent -->
                                 <div class="visible-label">
                                     <label><strong>Total Percent:</strong> {{ calculateTotal() }}
-                                        <br><strong>Remaining:</strong> {{ 100 - calculateTotal()}}</label>
-                                    <button type="button" ng-click="finalScore(); showme='true'">Calculate Bank Scores</button>
+                                        <br><strong>Remaining:</strong> {{ 100 - calculateTotal() }}</label>
+                                    <button type="button" 
+                                            ng-click="finalScore(); showme=true" 
+                                            ng-disabled="calculateTotal() !== 100">
+                                            Calculate Bank Scores
+                                    </button>
                                 </div>
+                                <!-- Updated End Here : 2/20/2024 -->
                             </div>
                             <div class="form-container">
                                 <form>
@@ -301,11 +307,17 @@
                         <div>
                             <div id="slider-container" class="slider-container">
                                 <p>In this section, you can enter weights for any of the 20 categories used for ranking FINTECH. If the value typed into the box isn't valid, it will automatically be set to 0. When your Total Percent is 100, you can click "Calculate FINTECH Scores" to produce a customized table with banks listed from best to worst.</p>
+                                <!-- Updated ver for Button with disable/inable function respect to Total Percent -->
                                 <div class="visible-label">
                                     <label><strong>Total Percent:</strong> {{ calculateTotal() }}
-                                        <br><strong>Remaining:</strong> {{ 100 - calculateTotal()}}</label>
-                                    <button type="button" ng-click="finalScore(); showme='true'">Calculate FINTECH scores</button>
+                                        <br><strong>Remaining:</strong> {{ 100 - calculateTotal() }}</label>
+                                    <button type="button" 
+                                            ng-click="finalScore(); showme=true" 
+                                            ng-disabled="calculateTotal() !== 100">
+                                            Calculate FINTECH Scores
+                                    </button>
                                 </div>
+                                <!-- Updated End Here : 2/20/2024 -->
                             </div>
                             <div class="form-container">
                                 <form>
