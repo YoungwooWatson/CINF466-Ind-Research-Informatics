@@ -20,7 +20,7 @@
             <h2><u>Your Results</u><span class="close" ng-click="showme=false"><span class="cr-close">close results</span><span class="x-close">X</span></span></h2>
             <table class="ratings-table">
                 <tr>
-                    <th>Bank Name</th>
+                    <th ng-bind="rankingType"></th>                     <!-- This line is used to detail either "Bank Name" or "Fintech Name" depending on what option they choose for their custom input-->
                     <th>Score (out of 100)</th>
                 </tr>
                 <tr ng-repeat="item in allScores | orderBy: '-score'">
@@ -42,7 +42,7 @@
             </div>
             <div class="bank-rating row">
                 <div id="bank-weights" class="bank-rating-input">
-                    <h1>Bank Ratings</h1>
+                    <h1>Bank & Fintech Ratings</h1>
                     <p>This site offers New Yorkers the opportunity to review the products and services of the nineteen largest banks servicing individual consumers throughout the state. Individuals can also customize this bank ranking index to reflect their own interests by selecting the categories they would like to include in their own index and then weighting those categories in accordance to their relative importance to the individual. The first thing for the customer to do is select the categories that he or she wants to include in the customized ranking. Next, apply a percentage weight (out of 100) to give to each category. Finally, apply the categories and their weights to the final score to generate a ranking of the nineteen banks based on the customer’s own ranking index. Through this process, consumers can generate their own, customized ranking that reflects the products and services that are the most important to them.</p>
                     <div id="accordion" class="ranking-container">
                         <h3>View the Default Ratings for All Banks</h3>
@@ -250,12 +250,11 @@
 						
 						
 					
-                      <!-- New Content--> 
-					
+                      <!-- Default FINTECH ratings--> 
 					
 					<h3>View the Default Ratings for All Fintech</h3>
                         <div>
-                            <p>The scores in the table below are based on all categories being equally important to a customer. The FINTECH are sorted by their overall rankings from best to worst.</p>
+                            <p>The scores in the table below are based on all categories being equally important to a customer. The Fintech are sorted by their overall rankings from best to worst.</p>
                             <table>
                                 <tr>
                                     <th>Fintech Name</th>
@@ -297,14 +296,15 @@
                             </table>
                         </div>
                     
-					<h3>Customize Your FINTECH RATINGS</h3>
+					<!-- HTML for CUSTOM FITECH AREA -->
+					<h3>Customize Your Fintech Ratings</h3>
                         <div>
                             <div id="slider-container" class="slider-container">
-                                <p>In this section, you can enter weights for any of the 20 categories used for ranking FINTECH. If the value typed into the box isn't valid, it will automatically be set to 0. When your Total Percent is 100, you can click "Calculate FINTECH Scores" to produce a customized table with banks listed from best to worst.</p>
+                                <p>In this section, you can enter weights for any of the 15 categories used for ranking Fintech. If the value typed into the box isn't valid, it will automatically be set to 0. When your Total Percent is 100, you can click "Calculate Fintech Scores" to produce a customized table with banks listed from best to worst.</p>
                                 <div class="visible-label">
-                                    <label><strong>Total Percent:</strong> {{ calculateTotal() }}
-                                        <br><strong>Remaining:</strong> {{ 100 - calculateTotal()}}</label>
-                                    <button type="button" ng-click="finalScore(); showme='true'">Calculate FINTECH scores</button>
+                                    <label><strong>Total Percent:</strong> {{ calculateTotal2() }}
+                                        <br><strong>Remaining:</strong> {{ 100 - calculateTotal2()}}</label>
+                                    <button type="button" ng-click="finalScore2(); showme='true'">Calculate Fintech scores</button> 
                                 </div>
                             </div>
                             <div class="form-container">
@@ -312,71 +312,71 @@
                                     <ul>
                                         <li>
                                             <label>P2P Banking </label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.numBraches">  <!-- FIX THESE ng-model THINGIES FIGURE IT OUT IDK should be pretty easy tbh just DO IT -->
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.peerToPeerBankin">    <!-- If you plan to adjust this in the future please remember to keep the "ng-blur" and "ng-model" are the same in the different one! -->  
                                         </li>
                                         <li>
                                             <label>Encrypted financial transfers </label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.branchLocDistribution">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.encryptTrans">
                                         </li>
                                         <li>
                                             <label>Link external bank account</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.onlineBankings">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.linkExternalAccount">
                                         </li>
                                         <li>
                                             <label>Link external credit card</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.atmFees">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.linkExternalCreditCard">
                                         </li>
                                         <li>
                                             <label>Fraud protection</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.checkingFees">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.fraudProtection">
                                         </li>
 
                                         <li>
                                             <label>One touch login</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.savingsFees">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.oneTouchLogin">
                                         </li>
                                         <li>
                                             <label>Paycheck advance</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.overdraft">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.paycheckAdvance">
                                         </li>
                                         <li>
                                             <label>Contactless payment</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.overdraftLimit">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.contactlessPayment">
                                         </li>
                                         <li>
                                             <label>2 factor authentication</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.creditCards">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.twoFactorAuth">
                                         </li>
                                         <li>
                                             <label>Transaction fees</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.creditCardFees">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.transactionFees">
                                         </li>
 
                                         <li>
                                             <label>Credit building</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.loanOriginationMarketShare">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.creditBuilding">
                                         </li>
                                         <li>
                                             <label>Credit card offering</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptNy">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.creditCardOffering">
                                         </li>
                                         <li>
                                             <label>Overdraft fees</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptLatino">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.overdraftFees">
                                         </li>
                                         <li>
                                             <label>Credit card payment fees</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptBlack">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.creditCardPaymentFees">
                                         </li>
                                         <li>
                                             <label>Cryptocurrency purchase options</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptLowIncome">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.cryptoPurchaseOptions">
                                         </li>
 
 
                                         <li>
                                             <label>Cash advance</label>
-                                            <input type="text" ng-blur="reset()" ng-model="weights.percentLowBorrowers">
+                                            <input type="text" ng-blur="reset2()" ng-model="tWeights.cashAdvance">
                                         </li>
                                         
 
@@ -389,9 +389,9 @@
                                     </li>-->
                                     </ul>
                                     <div class="hidden-label">
-                                        <label><strong>Total Percent:</strong> {{ calculateTotal() }}
-                                            <br><strong>Remaining:</strong> {{ 100 - calculateTotal()}}</label>
-                                        <button type="button" ng-click="finalScore(); showme='true'">Calculate FINTECH SCORESD</button> <!-- err: Have no idea why this isn't changing the buttons-->
+                                        <label><strong>Total Percent:</strong> {{ calculateTotal2() }}                       <!-- Modified for new function -->
+                                            <br><strong>Remaining:</strong> {{ 100 - calculateTotal2()}}</label>             <!-- Modified for new function -->
+                                        <button type="button" ng-click="finalScore2(); showme='true'">Calculate Fintech scores</button> <!-- Mobile Button -->
                                     </div>
                                 </form>
                                 

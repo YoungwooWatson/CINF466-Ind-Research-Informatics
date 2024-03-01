@@ -25,6 +25,29 @@ myApp.controller('myController', function ($scope) {
         loanAcceptLowComm: 0,
         percentCommColor: 0
     };
+	
+	$scope.tWeights = {                                   // This will be used for the "ng-model" in the Fintech HTML area
+			peerToPeerBankin: 0,
+			encryptTrans: 0,
+			linkExternalAccount: 0,
+			linkExternalCreditCard: 0,
+			fraudProtection: 0,
+			oneTouchLogin: 0,
+			paycheckAdvance: 0,
+			contactlessPayment: 0,
+			twoFactorAuth: 0,
+			transactionFees: 0,
+			creditBuilding: 0,
+			creditCardOffering: 0,
+			overdraftFees: 0,
+			creditCardPaymentFees: 0,
+			cryptoPurchaseOptions: 0,
+			cashAdvance: 0
+		
+	}
+	
+	$scope.rankingType = "";                              // This variable is used as text for which ranking results you get (Bank vs Fintech) [~Line 26 in ranking.html] 
+	
 
     $scope.calculateTotal = function () {
         $scope.total = 0;
@@ -33,6 +56,17 @@ myApp.controller('myController', function ($scope) {
         }
         return $scope.total;
     };
+	
+	// New Function For tWeights stuff
+	$scope.calculateTotal2 = function () {
+        $scope.total = 0;
+        for (var weight in $scope.tWeights) {
+            $scope.total += parseInt($scope.tWeights[weight]);
+        }
+        return $scope.total;
+    };
+	
+	
 
 
 	// ==============================================================
@@ -40,7 +74,7 @@ myApp.controller('myController', function ($scope) {
 	// ==============================================================
 	
 	var techInfo = [{
-		bankName: 'Paypal',
+		bankName: 'payPal',                               // Be sure to keep the names the identical to the variables below in the "finalScore2()" function or else it will throw an NULL error
 		bankRatings: {
 			peerToPeerBankin: 5,
 			encryptTrans: 6.25,
@@ -57,12 +91,12 @@ myApp.controller('myController', function ($scope) {
 			overdraftFees: 6.25,
 			creditCardPaymentFees: 3.75,
 			cryptoPurchaseOptions: 2.5,
-			cashAdvance: 0               // This was marked BLANK in the spread sheet, so keep an eye on this one and be sure to ask the client for clarification...
+			cashAdvance: 0                                // This was marked BLANK in the spread sheet, so keep an eye on this one and be sure to ask the client for clarification...
 			
 	}},
 	
 	{
-		bankName: 'ApplePay',
+		bankName: 'applePay',
 		bankRatings: {
 			peerToPeerBankin: 5,
 			encryptTrans: 6.25,
@@ -84,7 +118,7 @@ myApp.controller('myController', function ($scope) {
 	}},
 	
 	{
-		bankName: 'GooglePay',
+		bankName: 'googlePay',
 		bankRatings: {
 			peerToPeerBankin: 4.25,
 			encryptTrans: 6.25,
@@ -106,7 +140,7 @@ myApp.controller('myController', function ($scope) {
 	}},
 	
 	{
-		bankName: 'Venmo',
+		bankName: 'venmo',
 		bankRatings: {
 			peerToPeerBankin: 4.25,
 			encryptTrans: 0,
@@ -128,7 +162,7 @@ myApp.controller('myController', function ($scope) {
 	}},
 	
 	{
-		bankName: 'CashApp',
+		bankName: 'cashApp',
 		bankRatings: {
 			peerToPeerBankin: 6.25,
 			encryptTrans: 6.25,
@@ -150,7 +184,7 @@ myApp.controller('myController', function ($scope) {
 	}},
 	
 	{
-		bankName: 'Chime',
+		bankName: 'chime',
 		bankRatings: {
 			peerToPeerBankin: 6.25,
 			encryptTrans: 6.25,
@@ -172,7 +206,7 @@ myApp.controller('myController', function ($scope) {
 	}},
 	
 	{
-		bankName: 'Moneylion',
+		bankName: 'moneyLion',
 		bankRatings: {
 			peerToPeerBankin: 1,
 			encryptTrans: 6.25,
@@ -194,7 +228,7 @@ myApp.controller('myController', function ($scope) {
 	}},
 	
 	{
-		bankName: 'Zelle',
+		bankName: 'zelle',
 		bankRatings: {
 			peerToPeerBankin: 6.25,
 			encryptTrans: 6.25,
@@ -684,6 +718,17 @@ myApp.controller('myController', function ($scope) {
         for (var weight in $scope.weights) {
             if ($scope.weights[weight] === "" || isNaN($scope.weights[weight]) || $scope.weights[weight] < 0) {
                 $scope.weights[weight] = 0;
+				console.log("Triggered For Reset")
+            }
+        }
+    };
+	
+	// This function is used to reset the values of the custom Fintech area back to zero if there is no number present
+	$scope.reset2 = function () {
+        for (var weight in $scope.tWeights) {
+            if ($scope.tWeights[weight] === "" || isNaN($scope.tWeights[weight]) || $scope.tWeights[weight] < 0) {
+                $scope.tWeights[weight] = 0;
+				console.log("Triggered For Reset 2")
             }
         }
     };
@@ -692,8 +737,11 @@ myApp.controller('myController', function ($scope) {
         
     }
     
-    $scope.finalScore = function () {                          // THIS SI THE BIG BOY FUCTION THAT YOU NEED TO LOOK AT FOR THE FINTRECH 
-        $scope.bankOfAmerica = [];
+	
+	// This function is used for the weight/score calculator on the custom BANK area. Please don't change this too much or you run the risk of bricking the whole system.
+    $scope.finalScore = function () {                          
+        $scope.rankingType = "Bank Name";
+		$scope.bankOfAmerica = [];
         $scope.hsbc = [];
         $scope.santander = [];
         $scope.jpMorganChase = [];
@@ -717,8 +765,9 @@ myApp.controller('myController', function ($scope) {
             $scope.score = 0;                                                                          // set score = 0
             for (var score in bankInfo[x].bankRatings) {                                               // For the score variable in all the ratings in the specific bank...
                 $scope.current = bankInfo[x].bankName;                                                 // Grab the bank name
-                $scope.score = parseInt(bankInfo[x].bankRatings[score] / 5 * $scope.weights[score]);   // Divide the score by 5 to calculate the weight of the score
-                $scope[$scope.current].push($scope.score);                                             // ??? Push the current score to the overall score ???
+				$scope.score = parseInt(bankInfo[x].bankRatings[score] / 5 * $scope.weights[score]);   // Divide the score by 5 to calculate the weight of the score
+				$scope[$scope.current].push($scope.score);                                             // ??? Push the current score to the overall score ???
+				
             }
             console.log($scope.current + ": " + $scope[$scope.current]);
         }
@@ -764,5 +813,71 @@ myApp.controller('myController', function ($scope) {
         };
         return $scope.score;
     };
+	
+	
+	
+	// ==========================================================================================
+	// ============================== NEW FUNCTION -- V1.0 ======================================
+	// ==========================================================================================
+	
+
+	
+	$scope.finalScore2 = function () {                          
+        $scope.rankingType = "Fintech Name";
+		$scope.payPal = [];                                                                            // Defining Variables For Lists
+        $scope.applePay = [];
+        $scope.googlePay = [];
+        $scope.venmo = [];
+        $scope.cashApp = [];
+        $scope.chime = [];
+        $scope.moneyLion = [];
+        $scope.zelle = [];
+
+		//console.log($scope.tWeights)
+
+        for (var x = 0; x < techInfo.length; x++) {                                                    // For all variables in the bank info list...
+            $scope.score = 0;                                                                          // set score = 0
+            for (var score in techInfo[x].bankRatings) {                                               // For the score variable in all the ratings in the specific bank...
+                $scope.current = techInfo[x].bankName;                                                 // Grab the bank name
+				$scope.score = parseFloat(techInfo[x].bankRatings[score] / 6.25 * $scope.tWeights[score]).toFixed(2);  
+                $scope[$scope.current].push($scope.score);                                             
+            }
+            console.log($scope.current + ": " + $scope[$scope.current]);                                
+			//console.log("")
+        }
+
+        $scope.oneScore = function (bank) {                                                            
+            var total = 0;                                                                             
+            for (var y = 0; y < bank.length; y++) {                                                    
+                total += parseFloat(bank[y]);
+            }
+            return parseFloat(total).toFixed(2);                                                       // Rounding the final result to 2 decimal places (May change this depending on client feedback)
+        };
+
+
+        $scope.allScores = [                                                                            // Create a list for all the scores to be displayed.
+            {bankname: 'PayPal', score: $scope.oneScore($scope.payPal)},
+            {bankname: 'ApplePay', score: $scope.oneScore($scope.applePay)},
+            {bankname: 'GooglePay', score: $scope.oneScore($scope.googlePay)},
+            {bankname: 'Venmo', score: $scope.oneScore($scope.venmo)},
+            {bankname: 'CashApp', score: $scope.oneScore($scope.cashApp)},
+            {bankname: 'Chime', score: $scope.oneScore($scope.chime)},
+            {bankname: 'MoneyLion', score: $scope.oneScore($scope.moneyLion)},
+            {bankname: 'Zelle', score: $scope.oneScore($scope.zelle)}
+
+        ];
+        
+        $scope.createOverlay = function() {
+            $scope.className = "noscroll";
+            if ($scope.className = "noscroll") {
+                $scope.className = "scroll";
+            } 
+            else {
+                $scope.className = "noscroll";
+            }
+        };
+        return $scope.score;
+    };
+	
 
 });
