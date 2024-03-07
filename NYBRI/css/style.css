@@ -38,11 +38,13 @@ body {
     box-shadow: 3px 3px 1em #555;
     border-radius: 10px;
 }
+
 .header, .footer {
     background: white;
     width: 800px;
     max-width: 100%;
 }
+
 .index,
 .about,
 .bank-rating,
@@ -120,8 +122,12 @@ p {
 }
 .header img {
     float: left;
-    max-width: 100%;
-}
+    width: 20%;
+    padding: 5px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+   }
+
 .header nav {
     float: right;
     margin-top: 4em;
@@ -190,6 +196,7 @@ nav a {
     }
     .header img, .header nav {
         float: none;
+        max-width: 100%;
     }
     .header nav {
         width: 350px;
