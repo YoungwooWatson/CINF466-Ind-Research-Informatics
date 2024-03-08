@@ -1,33 +1,33 @@
 /*Custom Fonts Declared Here===============================*/
 @font-face {
   font-family: lobster;
-  src: url('../fonts/lobster.otf');
+  src: url("../fonts/lobster.otf");
 }
 
 @font-face {
   font-family: arc;
-  src: url('../fonts/arc.ttf');
+  src: url("../fonts/arc.ttf");
 }
 
 @font-face {
   font-family: titillium;
-  src: url('../fonts/titillium.otf');
+  src: url("../fonts/titillium.otf");
 }
 
 @font-face {
   font-family: sintony;
-  src: url('../fonts/sintony.otf');
+  src: url("../fonts/sintony.otf");
 }
 
-.logo{
-  width:160px;
+.logo {
+  width: 160px;
   position: fixed;
   top: 3px;
   left: 35px;
 }
 
-#footerLogo{
-  max-width:260px;
+#footerLogo {
+  max-width: 260px;
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -40,29 +40,29 @@
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  margin-top:0;
+  margin-top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   -webkit-animation-name: fadeIn;
   -webkit-animation-duration: 0.6s;
   animation-name: fadeIn;
-  animation-duration: 0.6s
+  animation-duration: 0.6s;
 }
-.modalClose{
-  display:inline-block;
+.modalClose {
+  display: inline-block;
   float: right;
-  margin-top:-25px;
+  margin-top: -25px;
 }
-.modalClose::after{
-  clear:both;
+.modalClose::after {
+  clear: both;
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin:75px auto; /* 15% from the top and centered */
+  margin: 75px auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 60%; /* Could be more or less, depending on screen size */
@@ -71,7 +71,7 @@
 }
 
 /* hide disclaimer by default=============================*/
-.disclaimer{
+.disclaimer {
   display: none;
 }
 
@@ -86,42 +86,42 @@ h2 {
   font-size: 35px;
   color: black;
   margin: auto;
-  text-align:center;
+  text-align: center;
 }
 
 h3 {
   font-family: sintony, Helvetica, sans-serif;
   font-size: 20px;
   margin: auto;
-  text-align:center;
+  text-align: center;
 }
 
 h4 {
   font-family: sintony, Helvetica, sans-serif;
   font-size: 15px;
   margin: auto;
-  text-align:center;
+  text-align: center;
 }
 
-main{
-  background-color: #C8C8C8;
+main {
+  background-color: #c8c8c8;
   color: black;
-  height:auto;
+  min-height: 90vh;
 }
 
-.pageTitle{
+.pageTitle {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.pageTitle h2{
-  text-align:left;
-  margin-left:250px;
+.pageTitle h2 {
+  text-align: left;
+  margin-left: 250px;
 }
 /*Typical Paragraph Body==================================*/
-body{
+body {
   /* width:100vw; */
-  background-color:#C8C8C8;
+  background-color: #c8c8c8;
 }
 
 p {
@@ -137,22 +137,22 @@ ul {
   margin: 0 5% 0 10%;
 }
 
-li{
+li {
   font-family: titillium, Helvetica, sans-serif;
   font-size: 20px;
   color: inherit;
 }
 
 /*styles for report-activities*/
-.act{
-  display:none;
+.act {
+  display: none;
 }
 
-#otherType{
+#otherType {
   visibility: hidden;
 }
 
-#reportingactResults{
+#reportingactResults {
   display: none;
 }
 
@@ -163,154 +163,154 @@ li{
   color: white;
   background: rgba(0, 135, 208, 0.9);
   padding-left: 200px;
-  position:sticky;
+  position: sticky;
   /* padding-left:max(20%, 200px); */
   /* width:80%; */
   /* position:fixed; */
-  height:50px;
-  top:0;
+  height: 50px;
+  top: 0;
   z-index: 1;
 }
 
-#nav_burger{
-  height:44px;
-  float:right;
-  padding:5px;
+#nav_burger {
+  height: 44px;
+  float: right;
+  padding: 5px;
 }
 
-#nav_burger:hover{
+#nav_burger:hover {
   opacity: 0.5;
 }
 
-#nav_burger_hide{
-  display:none;
-  padding-top:55px;
+#nav_burger_hide {
+  display: none;
+  padding-top: 55px;
   background: rgba(0, 135, 208, 0.9);
-  height:auto;
+  height: auto;
 }
 
-.nav_mobile{
+.nav_mobile {
   color: white;
   background-color: dodgerblue;
   background: rgba(0, 135, 208, 0.9);
-  height:55px;
-  position:sticky;
-  top:0;
+  height: 55px;
+  position: sticky;
+  top: 0;
   z-index: 1;
-  display:none;
-  text-align:center;
+  display: none;
+  text-align: center;
 }
 
-.nav a{
+.nav a {
   text-decoration: none;
   font-family: titillium;
   color: white;
   font-size: 25px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top:6px;
+  padding-top: 6px;
   display: inline-block;
 }
 
-.nav_mobile a{
+.nav_mobile a {
   text-decoration: none;
   font-family: titillium;
   color: white;
   font-size: 25px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top:6px;
+  padding-top: 6px;
 }
 
-.active{
+.active {
   background-color: #0076d0;
-  height:44px;
+  height: 44px;
 }
 
-.nav a:hover{
+.nav a:hover {
   background-color: #0076d0;
-  height:44px;
+  height: 44px;
   text-shadow: 2px 2px #333333;
 }
 
-.nav_mobile a:hover{
+.nav_mobile a:hover {
   background-color: #0076d0;
   opacity: 0.8;
   text-shadow: 2px 2px #333333;
 }
 
 /*aside nav===============================================*/
-aside{
+aside {
   float: left;
-  width:225px;
-  position:fixed;
-  top:50px;
+  width: 225px;
+  position: fixed;
+  top: 50px;
   bottom: 0;
   z-index: 1;
 }
 
-#sideNav{
-  overflow:auto;
+#sideNav {
+  overflow: auto;
   float: left;
-  height:100%;
+  height: 100%;
   width: 100%;
-  margin:0px;
-  padding:0px;
-  padding-top:50px;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 50px;
   background-color: #006399;
   transition: 0.5s;
 }
 
-#sideNavMobile{
-  overflow:auto;
+#sideNavMobile {
+  overflow: auto;
   float: left;
-  height:100%;
+  height: 100%;
   width: 100%;
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px;
   background-color: #006399;
   transition: 0.5s;
-  display:none;
-  margin-top:5px;
+  display: none;
+  margin-top: 5px;
 }
 
-#sideNav a{
+#sideNav a {
   padding: 0.5em;
-  margin-bottom:5px;
-  width:99%;
-  float:left;
+  margin-bottom: 5px;
+  width: 99%;
+  float: left;
   transition: 0.3s;
   font-size: 22px;
-  color:white;
-  text-decoration:none;
+  color: white;
+  text-decoration: none;
 }
 
-#sideNavMobile a{
+#sideNavMobile a {
   padding: 0.5em;
-  margin-bottom:5px;
-  width:99%;
-  float:left;
+  margin-bottom: 5px;
+  width: 99%;
+  float: left;
   transition: 0.3s;
   font-size: 22px;
-  color:white;
-  text-decoration:none;
+  color: white;
+  text-decoration: none;
 }
 
-#sideNav a:hover{
+#sideNav a:hover {
   background-color: dodgerblue;
 }
 
-#sideNavMobile a:hover{
+#sideNavMobile a:hover {
   background-color: dodgerblue;
 }
 
 #sideNavMobile .closebtn {
-  margin:auto;
-  margin-right:10px;
-  text-align:right;
+  margin: auto;
+  margin-right: 10px;
+  text-align: right;
   padding-left: 0px;
-  padding-right:10px;
-  width:100%;
+  padding-right: 10px;
+  width: 100%;
   transition: 0.3s;
   font-size: 30px;
 }
@@ -322,8 +322,8 @@ aside{
   color: white;
   padding: 10px 15px;
   border: none;
-  position:fixed;
-  left:0;
+  position: fixed;
+  left: 0;
   border-radius: 0 20px 20px 0;
   background: rgba(0, 135, 208, 0.9);
   top: 58px;
@@ -334,55 +334,56 @@ aside{
 }
 
 #hamburger {
-  transition: margin-left .5s;
+  transition: margin-left 0.5s;
   padding: 16px;
-  display:none;
+  display: none;
 }
 
 /*Slider===========================================*/
-#moduleStart{
+#moduleStart {
   width: 70%;
-  margin:auto;
-  min-height:400px;
+  margin: auto;
+  min-height: 400px;
   padding-bottom: 50px;
 }
 
-#moduleStartBtn{
+#moduleStartBtn {
   transition-duration: 0.5s;
-  width:200px;
+  width: 200px;
   background-color: rgba(0, 135, 208, 0.9);
   padding-top: 5px;
   padding-bottom: 5px;
-  color:white;
-  border-style:solid;
-  border-color:black;
-  border-radius:15px;
-  border-width:1px;
+  color: white;
+  border-style: solid;
+  border-color: black;
+  border-radius: 15px;
+  border-width: 1px;
 }
 
-#moduleStartBtn:hover, .altHover:hover{
+#moduleStartBtn:hover,
+.altHover:hover {
   cursor: pointer;
   background-color: rgba(0, 135, 208, 0.6);
 }
 
-.moduleStartLinks{
-  text-decoration:none;
-  width:100%;
+.moduleStartLinks {
+  text-decoration: none;
+  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  display:block;
-  float:left;
+  display: block;
+  float: left;
   background-color: rgba(0, 135, 208, 0.9);
-  border-style:solid;
-  border-color:black;
-  border-radius:15px;
-  border-width:1px;
-  margin:2px;
-  text-align:center;
-  color:white;
+  border-style: solid;
+  border-color: black;
+  border-radius: 15px;
+  border-width: 1px;
+  margin: 2px;
+  text-align: center;
+  color: white;
 }
 
-.moduleStartLinks:hover{
+.moduleStartLinks:hover {
   cursor: pointer;
   background-color: rgba(0, 135, 208, 0.6);
 }
@@ -391,19 +392,19 @@ aside{
   display: none;
   min-height: 500px;
   box-shadow: inset 0px 0px 10px 5px #888888;
-  padding-bottom:2em;
+  padding-bottom: 2em;
 }
 
-.moduleSlide h3{
+.moduleSlide h3 {
   padding: 10px;
-  margin-top:60px;
+  margin-top: 60px;
 }
 
-.transcripts{
-  padding-bottom:60px;
+.transcripts {
+  padding-bottom: 60px;
 }
 
-.moduleSlide button{
+.moduleSlide button {
   padding: 10px;
   margin-bottom: 60px;
 }
@@ -413,14 +414,14 @@ aside{
   min-height: 500px;
 }
 
-.moduleSlide p{
+.moduleSlide p {
   margin: 10px;
   margin-left: 10%;
   margin-right: 10%;
 }
 
-.moduleSlide h2{
-  padding-top:20px;
+.moduleSlide h2 {
+  padding-top: 20px;
 }
 
 .slideshowContainer {
@@ -429,20 +430,21 @@ aside{
   position: relative;
   margin-left: 250px;
   margin-right: 5%;
-  background-color:lightgray;
-  border-radius:10px;
+  background-color: lightgray;
+  border-radius: 10px;
 }
 
-.homeSlideshowContainer{
+.homeSlideshowContainer {
   width: 100%;
   min-height: 500px;
   position: relative;
   margin: auto;
-  filter: brightness(90%)
+  filter: brightness(90%);
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 325px;
@@ -455,7 +457,7 @@ aside{
   transition: 0.6s ease;
   border-radius: 0 15px 15px 0;
   user-select: none;
-  background-color: #C8C8C8;
+  background-color: #c8c8c8;
   box-shadow: 11px 0px 20px 3px #888888;
 }
 
@@ -467,9 +469,10 @@ aside{
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color:white;
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
 /* Number text (1/8 etc) */
@@ -480,7 +483,7 @@ aside{
   position: absolute;
   bottom: 0;
   left: 5%;
-  background-color: #C8C8C8;
+  background-color: #c8c8c8;
   border-radius: 15px 15px 0 0;
   box-shadow: 0px -20px 15px 3px #888888;
 }
@@ -496,7 +499,7 @@ aside{
   text-align: left;
 }
 
-.bodytext{
+.bodytext {
   text-align: center;
   margin: auto;
   padding: inherit;
@@ -544,52 +547,60 @@ aside{
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .show {
+.popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
+  animation: fadeIn 1s;
 }
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*Card Flip For Modules*/
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flipcardholder{
+.flipcardholder {
   margin: 15px;
-  display:block;
+  display: block;
   text-align: center;
   margin: auto;
-  width:100%;
+  width: 100%;
 }
 
-.container{
-  width:100%;
+.container {
+  width: 100%;
   max-width: 1200px;
-  text-align:center;
+  text-align: center;
   margin: auto;
 }
 
 .flip-card {
   background-color: transparent;
   text-align: center;
-  float:left;
+  float: left;
   width: 45%;
   height: 75px;
   margin: 15px 2.5%;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-.flip-card:nth-child(4){
+.flip-card:nth-child(4) {
   margin-bottom: 4em;
 }
 
@@ -613,12 +624,13 @@ aside{
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   border: 1px solid #000;
-  border-radius:15px;
+  border-radius: 15px;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
@@ -629,24 +641,24 @@ aside{
   color: black;
 }
 
-.flip-card-back a{
-  text-decoration:none;
+.flip-card-back a {
+  text-decoration: none;
   display: block;
-  color:white;
+  color: white;
 }
 
 /* Style the back side */
 .flip-card-back {
   background-color: dodgerblue;
-  text-decoration:none;
-  color:white;
+  text-decoration: none;
+  color: white;
   transform: rotatex(180deg);
 }
 
-.flip-card-back a{
-  text-decoration:none;
+.flip-card-back a {
+  text-decoration: none;
   display: block;
-  color:white;
+  color: white;
 }
 
 /* The dots/bullets/indicators */
@@ -661,18 +673,18 @@ aside{
   transition: background-color 0.6s ease;
 }
 
-.dotActive, .dot:hover {
+.dotActive,
+.dot:hover {
   background-color: #717171;
 }
 
-.asideActive{
+.asideActive {
   background-color: #006399;
 }
 
-.asideActive2{
+.asideActive2 {
   background-color: #0076d0;
 }
-
 
 /* Fading animation */
 .fade {
@@ -683,198 +695,210 @@ aside{
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.video{
+.video {
   width: 55%;
-  margin:auto;
+  margin: auto;
   margin-top: 0px;
-  text-align:center;
-  display:block;
-  padding:30% 0 0 0;
-  position:relative;
+  text-align: center;
+  display: block;
+  padding: 30% 0 0 0;
+  position: relative;
 }
 
-audio{
-  display:block;
+audio {
+  display: block;
   width: 55%;
-  margin:auto;
+  margin: auto;
   margin-top: 10px;
   margin-bottom: 50px;
   height: 25px;
-  padding:10px;
+  padding: 10px;
   box-shadow: inset 0px 0px 5px 5px rgba(0, 135, 208, 1);
-  border-radius:10px;
+  border-radius: 10px;
 }
 
-.descImg{
-  height:500px;
+.descImg {
+  height: 500px;
 }
 
-.homeTitle{
-  position:absolute;
+.homeTitle {
+  position: absolute;
   top: 2%;
   left: 2%;
-  color:white;
+  color: white;
   font-size: 40px;
   margin-right: 6%;
-  text-align:left;
+  text-align: left;
   text-shadow: 2px 2px 5px #444;
 }
 
-.homeSlideshowContainer .moduleSlide{
-  padding-bottom:0;
+.homeSlideshowContainer .moduleSlide {
+  padding-bottom: 0;
 }
 
-.moduleSlide .homeDescription{
-  position:absolute;
-  border-style:solid;
-  border-color:black;
-  border-radius:15px;
+.moduleSlide .homeDescription {
+  position: absolute;
+  border-style: solid;
+  border-color: black;
+  border-radius: 15px;
   border-width: 1px;
-  background-color: rgba(0,0,0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   top: 20%;
-  width:90%;
-  color:white;
+  width: 90%;
+  color: white;
   font-size: 20px;
   margin: 0 4%;
-  padding:1%;
+  padding: 1%;
   text-shadow: 3px 3px 10px #000;
 }
 
-.homeQuestion{
-  position:absolute;
+.homeQuestion {
+  position: absolute;
   top: 38%;
   left: 20%;
-  color:white;
+  color: white;
   font-size: 50px;
   margin-right: 6%;
-  text-align:left;
+  text-align: left;
   text-shadow: 2px 2px 5px #444;
 }
 
-.homeQuestionInfo{
-  position:absolute;
+.homeQuestionInfo {
+  position: absolute;
   top: 55%;
   left: 20%;
-  color:white;
+  color: white;
   font-size: 30px;
   margin-right: 6%;
   text-shadow: 2px 2px 5px #444;
-  text-align:left;
+  text-align: left;
 }
 
-.goThereButton{
-  position:absolute;
+.goThereButton {
+  position: absolute;
   top: 80%;
   left: 20%;
   background: rgba(0, 0, 0, 0.5);
   padding: 15px;
   margin: 0px;
-  color:white;
+  color: white;
   font-size: 14px;
-  border-style:solid;
+  border-style: solid;
   border-color: black;
   border-width: 1px;
   cursor: pointer;
-  text-decoration:none;
+  text-decoration: none;
 }
 
-.goThereButton:hover{
+.goThereButton:hover {
   background: rgba(0, 0, 0, 0.9);
+}
+
+hr {
+  margin-bottom: 1px;
 }
 
 footer p {
   margin-left: 150px;
-  margin-top:0px;
-  color:white;
+  margin-top: 0px;
+  color: white;
 }
 
-#dotHide{
-  display:none;
+#dotHide {
+  display: none;
 }
 
 /*footer==================================================*/
-footer{
-margin-top:0px;
-position:sticky;
-z-index: 2;
-bottom: -150px;
-left:0;
-clear:both;
-background-color: #0076d0;
-height: 100px;
+footer {
+  margin-top: 0px;
+  position: sticky;
+  z-index: 2;
+  bottom: -150px;
+  left: 0;
+  clear: both;
+  background-color: #0076d0;
+  height: 100px;
 }
 
-.footerShort{
-margin-top:0px;
-bottom: initial;
-width:100%;
-/* position:absolute; */
-bottom: -150px;
-left:0;
-clear:both;
-background-color: #0076d0;
+.footerShort {
+  margin-top: 0px;
+  bottom: initial;
+  width: 100%;
+  /* position:absolute; */
+  bottom: -150px;
+  left: 0;
+  clear: both;
+  background-color: #0076d0;
 }
 
-#footerButtons{
+#footerButtons {
   margin-right: 300px;
 }
 
-footer button{
+footer button {
   width: 200px;
   border: 1px solid #000;
-  border-radius:10px;
+  border-radius: 10px;
   color: white;
   padding: 12px 25px;
   text-align: center;
   display: inline-block;
   font-size: 20px;
-  float:right;
-  margin:.25em 1em;
+  float: right;
+  margin: 0.25em 1em;
 }
 
-.spacer{
-height:350px;
+.spacer {
+  height: 350px;
 }
 
 @media only screen and (max-width: 1280px) {
-  .video{
+  .video {
     width: 75%;
   }
-  
-  .moduleSlide .homeDescription{
-    font-size:15px;
-    top:25%;
+
+  .moduleSlide .homeDescription {
+    font-size: 15px;
+    top: 25%;
   }
 
-  .spacer{
-    display:none;
+  .spacer {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 906px) {
-  .moduleSlide .homeDescription{
-    position:absolute;
-    border-style:solid;
-    border-color:black;
-    border-radius:15px;
+  .moduleSlide .homeDescription {
+    position: absolute;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
     border-width: 1px;
-    background-color: rgba(0,0,0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     top: 20%;
-    width:80%;
+    width: 80%;
     left: 5%;
     font-size: 1em;
   }
 
-  .homeQuestion{
+  .homeQuestion {
     font-size: 40px;
     text-align: center;
     width: 75%;
@@ -882,20 +906,19 @@ height:350px;
     left: 15%;
   }
 
-
-  #sideNav a{
+  #sideNav a {
     font-size: 20px;
   }
 
-  .flipcardholder{
+  .flipcardholder {
     max-width: 604px;
   }
 
-  .container{
-    width:100%;
+  .container {
+    width: 100%;
   }
 
-  .homeQuestionInfo{
+  .homeQuestionInfo {
     font-size: 20px;
     text-align: center;
     width: 75%;
@@ -903,104 +926,104 @@ height:350px;
     left: 15%;
   }
 
-  .homeSlideshowContainer{
+  .homeSlideshowContainer {
     height: 350px;
   }
 
-  .moduleSlide h2{
+  .moduleSlide h2 {
     font-size: 20px;
   }
 
-  .moduleSlide p{
+  .moduleSlide p {
     font-size: 15px;
   }
 
   footer p {
-    font-size:12px;
+    font-size: 12px;
     margin-left: 200px;
   }
 
-  aside{
-    width:200px;
-    top:50px;
+  aside {
+    width: 200px;
+    top: 50px;
   }
 
   .slideshowContainer {
     margin-left: 215px;
   }
-  
-  #footerLogo{
-    width:25%;
+
+  #footerLogo {
+    width: 25%;
   }
-  
-  #footerButtons{
-    margin-right:28%;
+
+  #footerButtons {
+    margin-right: 28%;
   }
-  
-  footer button{
+
+  footer button {
     width: 150px;
-    font-size:15px;
+    font-size: 15px;
     padding: 10px 10px;
   }
 }
 
 @media only screen and (max-width: 816px) {
-  .homeDescription{
-    width:75%;
+  .homeDescription {
+    width: 75%;
     left: 10%;
   }
-  
-  .moduleSlide .homeDescription{
-    font-size: .95em;
+
+  .moduleSlide .homeDescription {
+    font-size: 0.95em;
   }
-  
-  .pageTitle h2{
+
+  .pageTitle h2 {
     margin-left: 20px;
   }
-  
-  .nav a{
-    font-size:15px;
+
+  .nav a {
+    font-size: 15px;
   }
 
   .nav {
-    height:40px;
+    height: 40px;
     padding-left: 145px;
-    display:none;
+    display: none;
   }
 
   .nav_mobile {
-    display:block;
-    min-height:50px;
-    width:100%;
+    display: block;
+    min-height: 50px;
+    width: 100%;
   }
 
-  .nav_mobile a{
+  .nav_mobile a {
     text-decoration: none;
     font-family: titillium;
     color: white;
     font-size: 25px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top:6px;
-    height:50px;
+    padding-top: 6px;
+    height: 50px;
     display: inline-block;
   }
 
-  #nav_burger_hide a{
-    width:100%;
-    padding-left:0px;
+  #nav_burger_hide a {
+    width: 100%;
+    padding-left: 0px;
   }
 
-  .active{
-    display:none;
-    height:34px;
+  .active {
+    display: none;
+    height: 34px;
   }
 
-  .nav a:hover{
-    height:34px;
+  .nav a:hover {
+    height: 34px;
   }
 
-  .homeQuestion{
+  .homeQuestion {
     font-size: 30px;
     text-align: center;
     width: 75%;
@@ -1008,15 +1031,15 @@ height:350px;
     left: 15%;
   }
 
-  .flipcardholder{
+  .flipcardholder {
     max-width: 302px;
   }
 
-  .container{
-    width:100%;
+  .container {
+    width: 100%;
   }
 
-  .homeQuestionInfo{
+  .homeQuestionInfo {
     font-size: 15px;
     text-align: center;
     width: 75%;
@@ -1028,49 +1051,48 @@ height:350px;
     font-size: 20px;
   }
 
-  #sideNav{
+  #sideNav {
     display: none;
   }
 
   #hamburger {
-    display:block;
+    display: block;
   }
 
-  #sideNav a{
+  #sideNav a {
     font-size: 15px;
   }
-
 
   .slideshowContainer {
     margin-left: 0px;
     margin-right: 0px;
     max-width: 100%;
   }
-  
-  .moduleSlide{
-    width:100%;
+
+  .moduleSlide {
+    width: 100%;
     margin-left: 0px;
     margin-right: 0px;
   }
 }
 
 @media only screen and (max-width: 555px) {
-  .nav a{
-    font-size:12px;
-    padding-right:3px;
-    padding-left:3px;
+  .nav a {
+    font-size: 12px;
+    padding-right: 3px;
+    padding-left: 3px;
   }
 
-  .descImg{
-    height:550px;
+  .descImg {
+    height: 550px;
   }
-  
-  #footerLogo{
-    display:none;
+
+  #footerLogo {
+    display: none;
   }
-  
-  #footerButtons{
-    margin-right:5%;
+
+  #footerButtons {
+    margin-right: 5%;
   }
 
   .nav {
@@ -1079,25 +1101,25 @@ height:350px;
 }
 
 @media only screen and (max-width: 470px) {
-  .descImg{
-    height:650px;
+  .descImg {
+    height: 650px;
   }
-  
-  .flipcardholder{
-  margin-top:125px;
+
+  .flipcardholder {
+    margin-top: 125px;
   }
-  
-  footer button{
+
+  footer button {
     width: 110px;
-    font-size: 10px; 
+    font-size: 10px;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  .homeDescription{
-    margin-bottom:100px;
+  .homeDescription {
+    margin-bottom: 100px;
   }
-  .moduleSlide .homeDescription{
-    font-size: .85em;
+  .moduleSlide .homeDescription {
+    font-size: 0.85em;
   }
 }
