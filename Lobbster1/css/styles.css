@@ -106,7 +106,7 @@ h4 {
 main {
   background-color: #c8c8c8;
   color: black;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 .pageTitle {
@@ -118,7 +118,19 @@ main {
   text-align: left;
   margin-left: 250px;
 }
+
 /*Typical Paragraph Body==================================*/
+.section {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+hr .section__hr {
+  border: 1px solid #c8c8c8;
+}
+
 body {
   /* width:100vw; */
   background-color: #c8c8c8;
@@ -134,13 +146,15 @@ ul {
   font-family: titillium, Helvetica, sans-serif;
   font-size: 20px;
   color: inherit;
-  margin: 0 5% 0 10%;
+  list-style-type: none;
 }
 
 li {
   font-family: titillium, Helvetica, sans-serif;
   font-size: 20px;
   color: inherit;
+  list-style-type: none;
+  padding-bottom: 10px;
 }
 
 /*styles for report-activities*/
@@ -811,7 +825,7 @@ audio {
   background: rgba(0, 0, 0, 0.9);
 }
 
-hr {
+.footer__hr {
   margin-bottom: 1px;
 }
 
