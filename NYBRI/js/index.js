@@ -1088,21 +1088,23 @@ myApp.controller('myController', function ($scope) {
             for (var y = 0; y < bank.length; y++) {                                                    
                 total += parseFloat(bank[y]);
             }
-            return parseFloat(total).toFixed(2);                                                       // Rounding the final result to 2 decimal places (May change this depending on client feedback)
+            return total;
+			
         };
 
 
         $scope.allScores = [                                                                            // Create a list for all the scores to be displayed.
-            {bankname: 'PayPal', score: $scope.oneScore($scope.payPal)},
-            {bankname: 'ApplePay', score: $scope.oneScore($scope.applePay)},
-            {bankname: 'GooglePay', score: $scope.oneScore($scope.googlePay)},
-            {bankname: 'Venmo', score: $scope.oneScore($scope.venmo)},
-            {bankname: 'CashApp', score: $scope.oneScore($scope.cashApp)},
-            {bankname: 'Chime', score: $scope.oneScore($scope.chime)},
-            {bankname: 'MoneyLion', score: $scope.oneScore($scope.moneyLion)},
-            {bankname: 'Zelle', score: $scope.oneScore($scope.zelle)}
+            {bankname: 'PayPal', score: parseFloat($scope.oneScore($scope.payPal).toFixed(2))},
+            {bankname: 'ApplePay', score: parseFloat($scope.oneScore($scope.applePay).toFixed(2))},
+            {bankname: 'GooglePay', score: parseFloat($scope.oneScore($scope.googlePay).toFixed(2))},
+            {bankname: 'Venmo', score: parseFloat($scope.oneScore($scope.venmo).toFixed(2))},
+            {bankname: 'CashApp', score: parseFloat($scope.oneScore($scope.cashApp).toFixed(2))},
+            {bankname: 'Chime', score: parseFloat($scope.oneScore($scope.chime).toFixed(2))},
+            {bankname: 'MoneyLion', score: parseFloat($scope.oneScore($scope.moneyLion).toFixed(2))},
+            {bankname: 'Zelle', score: parseFloat($scope.oneScore($scope.zelle).toFixed(2))}
 
         ];
+		
         
         $scope.createOverlay = function() {
             $scope.className = "noscroll";
