@@ -132,7 +132,7 @@ hr .section__hr {
 }
 
 body {
-  /* width:100vw; */
+  width: 100%;
   background-color: #c8c8c8;
 }
 
@@ -154,7 +154,7 @@ li {
   font-size: 20px;
   color: inherit;
   list-style-type: none;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 
 /*styles for report-activities*/
@@ -172,18 +172,37 @@ li {
 
 /*Nav=====================================================*/
 .nav {
+  display: flex;
+  align-content: center;
   color: white;
   background-color: dodgerblue;
   color: white;
   background: rgba(0, 135, 208, 0.9);
   padding-left: 200px;
   position: sticky;
-  /* padding-left:max(20%, 200px); */
-  /* width:80%; */
-  /* position:fixed; */
   height: 50px;
   top: 0;
   z-index: 1;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 20px;
+
+  margin: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-family: titillium;
+  color: white;
+  font-size: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  display: inline-block;
 }
 
 #nav_burger {
@@ -215,17 +234,6 @@ li {
   text-align: center;
 }
 
-.nav a {
-  text-decoration: none;
-  font-family: titillium;
-  color: white;
-  font-size: 25px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 6px;
-  display: inline-block;
-}
-
 .nav_mobile a {
   text-decoration: none;
   font-family: titillium;
@@ -238,12 +246,12 @@ li {
 
 .active {
   background-color: #0076d0;
-  height: 44px;
+  height: 100%;
 }
 
 .nav a:hover {
   background-color: #0076d0;
-  height: 44px;
+  height: 80%;
   text-shadow: 2px 2px #333333;
 }
 
