@@ -532,3 +532,30 @@ nav a {
         left: 92%;
     }
 }
+
+/*CSS style for visual affect when the total point is not equal to 100, the button is grey out*/
+/*updated 03/14/2024*/
+#myButtonContainer .button-disabled {
+    background-color: grey;
+    color: white;
+}
+
+#myButtonContainer .button-disabled:hover {
+    background-color: #E2E3E7;
+    color: #000;
+}
+
+/*CSS style for visual affect for alert notification*/
+/*updqted 03/14/2024*/
+.alert {
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-message {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
