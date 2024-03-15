@@ -533,6 +533,8 @@ nav a {
     }
 }
 
+/*CSS style for visual affect when the total point is not equal to 100, the button is grey out*/
+/*updated 03/14/2024*/
 #myButtonContainer .button-disabled {
     background-color: grey;
     color: white;
@@ -543,6 +545,8 @@ nav a {
     color: #000;
 }
 
+/*CSS style for visual affect for alert notification*/
+/*updqted 03/14/2024*/
 .alert {
     padding: 15px;
     margin-top: 10px;
