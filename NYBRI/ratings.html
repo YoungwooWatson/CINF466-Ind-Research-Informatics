@@ -149,12 +149,24 @@
                                 banks. If the value typed into the box isn't valid, it will automatically be set to 0.
                                 When your Total Percent is 100, you can click "Calculate Bank Scores" to produce a
                                 customized table with banks listed from best to worst.</p>
-                            <div class="visible-label">
+                              <!-- Updated ver for Button with disable/inable function respect to Total Percent -->
+                              <div class="visible-label">
                                 <label><strong>Total Percent:</strong> {{ calculateTotal() }}
-                                    <br><strong>Remaining:</strong> {{ 100 - calculateTotal()}}</label>
-                                <button type="button" ng-click="finalScore(); showme='true'">Calculate Bank
-                                    Scores</button>
-                            </div>
+                                    <br><strong>Remaining:</strong> {{ 100 - calculateTotal() }}</label>
+                                    
+                                    <div id="myButtonContainer">
+                                        <button type="button" 
+                                            ng-click="checkAndCalculateBankScores()"
+                                            ng-class="{'button-disabled': calculateTotal() !== 100}">
+                                            Calculate Bank Scores
+                                        </button>
+                                        <div ng-show="showBankAlert" class="alert alert-message">
+                                            Please spend all 100 points for accurate bank scores calculation.
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            <!-- Updated End Here : 03/14/2024 -->
                         </div>
                         <div class="form-container">
                             <form>
@@ -323,12 +335,24 @@
                                 Fintech. If the value typed into the box isn't valid, it will automatically be set to 0.
                                 When your Total Percent is 100, you can click "Calculate Fintech Scores" to produce a
                                 customized table with banks listed from best to worst.</p>
-                            <div class="visible-label">
-                                <label><strong>Total Percent:</strong> {{ calculateTotal2() }}
-                                    <br><strong>Remaining:</strong> {{ 100 - calculateTotal2()}}</label>
-                                <button type="button" ng-click="finalScore2(); showme='true'">Calculate Fintech
-                                    scores</button>
-                            </div>
+                            <!-- Updated ver for Button with disable/inable function respect to Total Percent -->
+                                <div class="visible-label">
+                                    <label><strong>Total Percent:</strong> {{ calculateTotal2() }}
+                                        <br><strong>Remaining:</strong> {{ 100 - calculateTotal2() }}</label>
+									
+                                    <div id="myButtonContainer">
+                                        <button type="button" 
+										    ng-click="checkAndCalculateFintechScores()"
+                                            ng-class="{'button-disabled': calculateTotal2() !== 100}">
+										    Calculate Fintech Scores
+									    </button>
+									    <div ng-show="showFintechAlert" class="alert alert-message">
+										    Please spend all 100 points for accurate fintech scores calculation.
+									    </div>
+                                    </div>
+                                    
+                                </div>
+                            <!-- Updated End Here : 2/20/2024 -->
                         </div>
                         <div class="form-container">
                             <form>

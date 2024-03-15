@@ -2,6 +2,19 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('myController', function ($scope) {
     $scope.currentNavItem = 'page2';
+
+    //========================================
+	// updated for ranking button : 03/14/2024
+	//========================================
+	
+	$scope.showme = false;
+	$scope.showBankAlert = false; // This will control the bank scores alert
+	$scope.showFintechAlert = false; // This will control the fintech scores alert
+
+	
+	//========================================
+	// End of new updates : 03/14/2024
+	//========================================
     
     $scope.weights = {
         numBraches: 0,
@@ -1118,5 +1131,47 @@ myApp.controller('myController', function ($scope) {
         return $scope.score;
     };
 	
+    //========================================
+	// updated for ranking button : 03/14/2024
+	//========================================
+	
+	$scope.checkAndCalculateBankScores = function () {
+		var total = $scope.calculateTotal();
+        $scope.showBankAlert = total !== 100; // Show alert if total is not 100
+        $scope.showme = total === 100;    // Show results if total is 100
 
+        if ($scope.showme) {
+            $scope.finalScore(); // Calculate and display scores if total is 100
+        }
+    };
+
+    $scope.checkAndCalculateFintechScores = function () {
+		var total = $scope.calculateTotal2();
+        $scope.showFintechAlert = total !== 100; // Show alert if total is not 100
+        $scope.showme = total === 100;    // Show results if total is 100
+
+        if ($scope.showme) {
+            $scope.finalScore2(); // Calculate and display scores if total is 100
+        }
+    };
+
+    
+	//========================================
+	// End of new updates : 03/14/2024
+	//========================================
+
+    //================
+    // Additional codes for later uses.
+    //To make the aleart messages dissapear as soon as the user starts to enter numbers
+    // $scope.hideBankAlert = function() {
+    //    $scope.showBankAlert = false;
+    // };
+    // and add the followings code on ratings.html
+    // ng-change="hideBankAlert()" ng-blur="reset()"
+    // in all the input field such as
+    //<input type="text" ng-model="weights.numBranches" ng-change="hideBankAlert()" ng-blur="reset()">
+    //<input type="text" ng-model="weights.onlineBankings" ng-change="hideBankAlert()" ng-blur="reset()">
+    //03/14/2024
+    //================
+	
 });
