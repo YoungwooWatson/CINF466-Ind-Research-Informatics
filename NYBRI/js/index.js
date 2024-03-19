@@ -17,7 +17,7 @@ myApp.controller('myController', function ($scope) {
 	//========================================
     
     $scope.weights = {
-        numBraches: 0,
+        numBranches: 0,
         branchLocDistribution: 0,
         onlineBankings: 0,
         atmFees: 0,
@@ -271,7 +271,7 @@ myApp.controller('myController', function ($scope) {
 	var bankInfo = [{
         bankName: 'bankOfAmerica',
         bankRatings: {
-            numBraches: 5,
+            numBranches: 5,
             branchLocDistribution: 0,
             onlineBankings: 5,
             atmFees: 4,
@@ -296,7 +296,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'mt',
         bankRatings: {
-            numBraches: 5,
+            numBranches: 5,
             branchLocDistribution: 0,
             onlineBankings: 5,
             atmFees: 3,
@@ -320,7 +320,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'capitalOne',
         bankRatings: {
-            numBraches: 3,
+            numBranches: 3,
             branchLocDistribution: 0,
             onlineBankings: 4,
             atmFees: 5,
@@ -344,7 +344,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'ridgewoodSavings',
         bankRatings: {
-            numBraches: 2,
+            numBranches: 2,
             branchLocDistribution: 0,
             onlineBankings: 4,
             atmFees: 5,
@@ -368,7 +368,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'citibank',
         bankRatings: {
-           numBraches: 4,
+           numBranches: 4,
             branchLocDistribution: 0,
             onlineBankings: 5,
             atmFees: 4,
@@ -390,11 +390,11 @@ myApp.controller('myController', function ($scope) {
             percentCommColor: 0
         }
   }, {
-        bankName: 'satander', 
+        bankName: 'santander', 
         bankRatings: {
-            numBraches: 3,
+            numBranches: 3,
             branchLocDistribution: 0,
-            onlineBankings: 2,
+            onlineBankings: 3,
             atmFees: 5,
             checkingFees: 4,
             savingsFees: 4,
@@ -416,7 +416,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'tdBank',
         bankRatings: {
-            numBraches: 5,
+            numBranches: 5,
             branchLocDistribution: 0,
             onlineBankings: 5,
             atmFees: 3,
@@ -440,7 +440,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'keyBank',
         bankRatings: {
-            numBraches: 4,
+            numBranches: 4,
             branchLocDistribution: 0,
             onlineBankings: 5,
             atmFees: 3,
@@ -464,7 +464,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'citizensBank',
         bankRatings: {
-            numBraches: 4,
+            numBranches: 4,
             branchLocDistribution: 0,
             onlineBankings: 4,
             atmFees: 3,
@@ -488,7 +488,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'flagStarNYCB',
         bankRatings: {
-            numBraches: 4,
+            numBranches: 4,
             branchLocDistribution: 0,
             onlineBankings: 4,
             atmFees: 4,
@@ -512,31 +512,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'wellsFargo',
         bankRatings: {
-            numBraches: 3,
-            branchLocDistribution: 0,
-            onlineBankings: 0,
-            atmFees: 0,
-            checkingFees: 0,
-            savingsFees: 0,
-            overdraft: 0,
-            overdraftLimit: 0,
-            creditCards: 0,
-            customerService: 0,
-            acceptAltId: 0,
-            wireTransferCost: 0,
-            loanOriginationMarketShare: 0,
-            loanAcceptNy: 0,
-            loanAcceptLatino: 0,
-            loanAcceptBlack: 0,
-            loanAcceptLowIncome: 0,
-            percentLowBorrowers: 0,
-            loanAcceptLowComm: 0,
-            percentCommColor: 0
-        }
-  }, {
-        bankName: 'flushingBank',
-        bankRatings: {
-            numBraches: 1,
+            numBranches: 3,
             branchLocDistribution: 0,
             onlineBankings: 4,
             atmFees: 4,
@@ -558,9 +534,33 @@ myApp.controller('myController', function ($scope) {
             percentCommColor: 0
         }
   }, {
+        bankName: 'flushingBank',
+        bankRatings: {
+            numBranches: 1,
+            branchLocDistribution: 0,
+            onlineBankings: 3,
+            atmFees: 5,
+            checkingFees: 2,
+            savingsFees: 4,
+            overdraft: 2,
+            overdraftLimit: 5,
+            creditCards: 3,
+            customerService: 3,
+            acceptAltId: 0,
+            wireTransferCost: 3,
+            loanOriginationMarketShare: 0,
+            loanAcceptNy: 0,
+            loanAcceptLatino: 0,
+            loanAcceptBlack: 0,
+            loanAcceptLowIncome: 0,
+            percentLowBorrowers: 0,
+            loanAcceptLowComm: 0,
+            percentCommColor: 0
+        }
+  }, {
         bankName: 'communityBank',
         bankRatings: {
-            numBraches: 4,
+            numBranches: 4,
             branchLocDistribution: 0,
             onlineBankings: 3,
             atmFees: 4,
@@ -584,7 +584,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'nbtBank',
         bankRatings: {
-            numBraches: 4,
+            numBranches: 4,
             branchLocDistribution: 0,
             onlineBankings: 3,
             atmFees: 5,
@@ -608,7 +608,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'websterBank',
         bankRatings: {
-            numBraches: 3,
+            numBranches: 3,
             branchLocDistribution: 0,
             onlineBankings: 3,
             atmFees: 3,
@@ -632,7 +632,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'jpMorgan',
         bankRatings: {
-            numBraches: 5,
+            numBranches: 5,
             branchLocDistribution: 0,
             onlineBankings: 5,
             atmFees: 3,
@@ -656,7 +656,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'tompkinsBank',
         bankRatings: {
-            numBraches: 2,
+            numBranches: 2,
             branchLocDistribution: 0,
             onlineBankings: 4,
             atmFees: 5,
@@ -680,7 +680,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'northwestBank',
         bankRatings: {
-            numBraches: 2,
+            numBranches: 2,
             branchLocDistribution: 0,
             onlineBankings: 4,
             atmFees: 3,
@@ -704,7 +704,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'dimeBank',
         bankRatings: {
-            numBraches: 3,
+            numBranches: 3,
             branchLocDistribution: 0,
             onlineBankings: 3,
             atmFees: 0, //Rating is 0
@@ -728,7 +728,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'valleyBank',
         bankRatings: {
-            numBraches: 2,
+            numBranches: 2,
             branchLocDistribution: 0,
             onlineBankings: 4,
             atmFees: 4,
@@ -752,7 +752,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'fiveStarBank',
         bankRatings: {
-            numBraches: 3,
+            numBranches: 3,
             branchLocDistribution: 0,
             onlineBankings: 2,
             atmFees: 4,
@@ -776,7 +776,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'canNationalBank',
         bankRatings: {
-            numBraches: 1,
+            numBranches: 1,
             branchLocDistribution: 0,
             onlineBankings: 4,
             atmFees: 4,
@@ -800,7 +800,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'berkshireBank',
         bankRatings: {
-            numBraches: 1,
+            numBranches: 1,
             branchLocDistribution: 0,
             onlineBankings: 3,
             atmFees: 3,
@@ -824,7 +824,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'applebank',
         bankRatings: {
-            numBraches: 3,
+            numBranches: 3,
             branchLocDistribution: 0,
             onlineBankings: 2,
             atmFees: 4,
@@ -848,7 +848,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'trustcoBank',
         bankRatings: {
-            numBraches: 3,
+            numBranches: 3,
             branchLocDistribution: 0,
             onlineBankings: 2,
             atmFees: 5,
@@ -872,7 +872,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'chemungTrust',
         bankRatings: {
-            numBraches: 2,
+            numBranches: 2,
             branchLocDistribution: 0,
             onlineBankings: 3,
             atmFees: 0, // Rating is 0
@@ -896,7 +896,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'firstNationalBank',
         bankRatings: {
-            numBraches: 2,
+            numBranches: 2,
             branchLocDistribution: 0,
             onlineBankings: 2,
             atmFees: 0, // Rating is 0
@@ -920,7 +920,7 @@ myApp.controller('myController', function ($scope) {
   }, {
         bankName: 'glensFalls',
         bankRatings: {
-            numBraches: 1,
+            numBranches: 1,
             branchLocDistribution: 0,
             onlineBankings: 4,
             atmFees: 0, // Rating is 0
@@ -977,7 +977,7 @@ myApp.controller('myController', function ($scope) {
 		$scope.capitalOne = [];
 		$scope.ridgewoodSavings = [];
 		$scope.citibank = [];
-		$scope.satander = [];
+		$scope.santander = [];
 		$scope.tdBank = [];
 		$scope.keyBank = [];
 		$scope.citizensBank = [];
@@ -1027,7 +1027,7 @@ myApp.controller('myController', function ($scope) {
 			{bankname: 'Capital One', score: $scope.oneScore($scope.capitalOne)},
 			{bankname: 'Ridgewood Savings Bank', score: $scope.oneScore($scope.ridgewoodSavings)},
 			{bankname: 'Citibank', score: $scope.oneScore($scope.citibank)},
-			{bankname: 'Santander Bank', score: $scope.oneScore($scope.satander)}, // **JC - Double check variable spelling on this one to make sure they match
+			{bankname: 'Santander Bank', score: $scope.oneScore($scope.santander)}, // **JC - Double check variable spelling on this one to make sure they match
 			{bankname: 'TD Bank', score: $scope.oneScore($scope.tdBank)},
 			{bankname: 'Keybank', score: $scope.oneScore($scope.keyBank)},
 			{bankname: 'Citizens Bank', score: $scope.oneScore($scope.citizensBank)},
