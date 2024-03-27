@@ -210,88 +210,88 @@
                                 <ul>
                                     <li>
                                         <label for = "branches">Total Branch Locations</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.numBranches" id = "branches">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.numBranches" id = "branches">
                                     </li>
                                     <li>
                                         <label for = "branchLocations">Bank Location Distribution</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.branchLocDistribution" id = "branchLocations">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.branchLocDistribution" id = "branchLocations">
                                     </li>
                                     <li>
                                         <label for = "onlineBanking">Online Banking</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.onlineBankings" id = "onlineBanking">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.onlineBankings" id = "onlineBanking">
                                     </li>
                                     <li>
                                         <label for = "atmFee">ATM Fees Out of Network</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.atmFees" id = "atmFee">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.atmFees" id = "atmFee">
                                     </li>
                                     <li>
                                         <label for = "checkFee">Checking Account Fees</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.checkingFees" id = "checkFee">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.checkingFees" id = "checkFee">
                                     </li>
 
                                     <li>
                                         <label for = "saveFee">Savings Account Fees</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.savingsFees" id = "saveFee">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.savingsFees" id = "saveFee">
                                     </li>
                                     <li>
                                         <label for = "overdraftPrac">Overdraft Policy Practices</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.overdraft" id = "overdraftPrac">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.overdraft" id = "overdraftPrac">
                                     </li>
                                     <li>
                                         <label for = "overdraftThresh">Overdraft Thresholds and Limits</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.overdraftLimit" id = "overdraftThresh">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.overdraftLimit" id = "overdraftThresh">
                                     </li>
                                     <li>
                                         <label for = "creditCard">Basic Credit Cards</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.creditCards" id = "creditCard">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.creditCards" id = "creditCard">
                                     </li>
                                     <li>
                                         <label for = "custService">Customer Service</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.customerService" id = "custService">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.customerService" id = "custService">
                                     </li>
 
                                     <li>
                                         <label for = "loms">Loan Origination Market Share in NY State</label>
-                                        <input type="text" ng-blur="reset()"
+                                        <input type="number" ng-blur="reset()"
                                             ng-model="weights.loanOriginationMarketShare" id = "loms">
                                     </li>
                                     <li>
                                         <label for = "loanNY">Loan Acceptance Rate in NY State</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptNy" id = "loanNY">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.loanAcceptNy" id = "loanNY">
                                     </li>
                                     <li>
                                         <label for = "loanLatinoB">Loan Acceptance Rate for Latino Borrowers</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptLatino" id = "loanLatinoB">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.loanAcceptLatino" id = "loanLatinoB">
                                     </li>
                                     <li>
                                         <label for = "loanBlackB">Loan Acceptance Rate for Black Borrowers</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptBlack" id = "loanBlackB">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.loanAcceptBlack" id = "loanBlackB">
                                     </li>
                                     <li>
                                         <label for = "loanLowB">Loan Acceptance Rate for Low to Moderate Income Borrowers</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptLowIncome" id = "loanLowB">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.loanAcceptLowIncome" id = "loanLowB">
                                     </li>
 
 
                                     <li>
                                         <label for = "percenLow">Percentage of Total Low to Moderate Income Borrowers</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.percentLowBorrowers" id = "percenLow">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.percentLowBorrowers" id = "percenLow">
                                     </li>
                                     <li>
                                         <label for = "loanAcceptLow">Loan Acceptance Rate for Low to Moderate Income Communities</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.loanAcceptLowComm" id = "loanAcceptLow">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.loanAcceptLowComm" id = "loanAcceptLow">
                                     </li>
                                     <li>
                                         <label for = "commofColor">Percentage of Total in Communities of Color</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.percentCommColor" id = "commofColor">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.percentCommColor" id = "commofColor">
                                     </li>
                                     <li>
                                         <label for = "altID">Acceptance of Alternate Forms of Identification</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.acceptAltId" id = "altID">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.acceptAltId" id = "altID">
                                     </li>
                                     <li>
                                         <label for = "wireTrans">Cost of International Wire Transfers</label>
-                                        <input type="text" ng-blur="reset()" ng-model="weights.wireTransferCost" id = "wireTrans">
+                                        <input type="number" ng-blur="reset()" ng-model="weights.wireTransferCost" id = "wireTrans">
                                     </li>
 
 
@@ -367,7 +367,7 @@
                     <h3>Customize Your Fintech Ratings</h3>
                     <div>
                         <div id="slider-container" class="slider-container">
-                            <p>In this section, you can enter weights for any of the 15 categories used for ranking
+                            <p>In this section, you can enter weights for any of the 16 categories used for ranking
                                 Fintech. If the value typed into the box isn't valid, it will automatically be set to 0.
                                 When your Total Percent is 100, you can click "Calculate Fintech Scores" to produce a
                                 customized table with banks listed from best to worst.</p>
@@ -395,73 +395,73 @@
                                 <ul>
                                     <li>
                                         <label for = "p2p">P2P Banking </label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.peerToPeerBankin" id = "p2p">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.peerToPeerBankin" id = "p2p">
                                         <!-- If you plan to adjust this in the future please remember to keep the "ng-blur" and "ng-model" are the same in the different one! -->
                                     </li>
                                     <li>
                                         <label for = "encryptTransfer">Encrypted financial transfers </label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.encryptTrans" id = "encryptTransfer">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.encryptTrans" id = "encryptTransfer">
                                     </li>
                                     <li>
                                         <label for = "linkExternal">Link external bank account</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.linkExternalAccount" id = "linkExternal">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.linkExternalAccount" id = "linkExternal">
                                     </li>
                                     <li>
                                         <label for = "linkExternalCard">Link external credit card</label>
-                                        <input type="text" ng-blur="reset2()"
+                                        <input type="number" step="any" ng-blur="reset2()"
                                             ng-model="tWeights.linkExternalCreditCard" id = "linkExternalCard">
                                     </li>
                                     <li>
                                         <label for = "fProtect">Fraud protection</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.fraudProtection" id = "fProtect">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.fraudProtection" id = "fProtect">
                                     </li>
 
                                     <li>
                                         <label for = "oneTLogin">One touch login</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.oneTouchLogin" id = "oneTLogin">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.oneTouchLogin" id = "oneTLogin">
                                     </li>
                                     <li>
                                         <label for = "payAdv">Paycheck advance</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.paycheckAdvance" id = "payAdv">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.paycheckAdvance" id = "payAdv">
                                     </li>
                                     <li>
                                         <label for = "contactlessPay">Contactless payment</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.contactlessPayment" id = "contactlessPay">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.contactlessPayment" id = "contactlessPay">
                                     </li>
                                     <li>
                                         <label for = "twoFA">2 factor authentication</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.twoFactorAuth" id = "twoFA">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.twoFactorAuth" id = "twoFA">
                                     </li>
                                     <li>
                                         <label for = "transFees">Transaction fees</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.transactionFees" id = "transFees">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.transactionFees" id = "transFees">
                                     </li>
 
                                     <li>
                                         <label for = "creditBuild">Credit building</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.creditBuilding" id = "creditBuild">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.creditBuilding" id = "creditBuild">
                                     </li>
                                     <li>
                                         <label for = "ccOffering">Credit card offering</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.creditCardOffering" id = "ccOffering">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.creditCardOffering" id = "ccOffering">
                                     </li>
                                     <li>
                                         <label for = "odFees">Overdraft fees</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.overdraftFees" id = "odFees">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.overdraftFees" id = "odFees">
                                     </li>
                                     <li>
                                         <label for = "ccFees">Credit card payment fees</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.creditCardPaymentFees" id = "ccFees">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.creditCardPaymentFees" id = "ccFees">
                                     </li>
                                     <li>
                                         <label for = "cryptoOptions">Cryptocurrency purchase options</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.cryptoPurchaseOptions" id = "cryptoOptions">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.cryptoPurchaseOptions" id = "cryptoOptions">
                                     </li>
 
 
                                     <li>
                                         <label for = "cashAdv">Cash advance</label>
-                                        <input type="text" ng-blur="reset2()" ng-model="tWeights.cashAdvance" id = "cashAdv">
+                                        <input type="number" step="any" ng-blur="reset2()" ng-model="tWeights.cashAdvance" id = "cashAdv">
                                     </li>
 
 
