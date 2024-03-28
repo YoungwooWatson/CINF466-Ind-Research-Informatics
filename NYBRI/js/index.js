@@ -65,7 +65,7 @@ myApp.controller('myController', function ($scope) {
     $scope.calculateTotal = function () {
         $scope.total = 0;
         for (var weight in $scope.weights) {
-            $scope.total += parseInt($scope.weights[weight]);
+            $scope.total += parseFloat($scope.weights[weight]); // Use parseFloat instead of parseInt to include decimal values (03/26/2024 updated)
         }
         return $scope.total;
     };
@@ -74,7 +74,7 @@ myApp.controller('myController', function ($scope) {
 	$scope.calculateTotal2 = function () {
         $scope.total = 0;
         for (var weight in $scope.tWeights) {
-            $scope.total += parseInt($scope.tWeights[weight]);
+            $scope.total += parseFloat($scope.tWeights[weight]); // Use parseFloat instead of parseInt to include decimal values (03/26/2024 updated)
         }
         return $scope.total;
     };
